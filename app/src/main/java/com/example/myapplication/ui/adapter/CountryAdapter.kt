@@ -20,8 +20,8 @@ class CountryAdapter(
     ): RecyclerView.ViewHolder(binding.root) {
         fun bind(country: Country) {
             binding.apply {
-                tvCountryName.text = country.Country
-                btnViewStat.setOnClickListener {
+                CountryName.text = country.Country
+                CountryName.setOnClickListener {
                     val activity = it.context as AppCompatActivity
                     activity.supportFragmentManager.beginTransaction()
                         .replace(

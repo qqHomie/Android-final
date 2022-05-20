@@ -53,17 +53,17 @@ class CountryStatFragment : Fragment(R.layout.fragment_country_stat) {
         countryStatViewModel = CountryStatViewModel(Repository.getInstance())
         binding.apply {
             if (countryStat != null) {
-                tvCountryName.text = countryStat?.Country
-                tvConfirmedCnt.text = "Confirmed: ${countryStat?.Confirmed}"
-                tvDeathCnt.text = "Deaths: ${countryStat?.Deaths}"
-                tvRecoverCnt.text = "Recovered: ${countryStat?.Recovered}"
-                tvActiveCnt.text = "Active: ${countryStat?.Active}"
+                CountryName.text = countryStat?.Country
+                ConfirmedCnt.text = "Confirmed: ${countryStat?.Confirmed}"
+                DeathCnt.text = "Deaths: ${countryStat?.Deaths}"
+                RecoverCnt.text = "Recovered: ${countryStat?.Recovered}"
+                ActiveCnt.text = "Active: ${countryStat?.Active}"
             } else {
-                tvCountryName.text = countryStat?.Country
-                tvConfirmedCnt.text = "Confirmed: 0"
-                tvDeathCnt.text = "Deaths: 0"
-                tvRecoverCnt.text = "Recovered: 0"
-                tvActiveCnt.text = "Active: 0"
+                CountryName.text = countryStat?.Country
+                ConfirmedCnt.text = "Confirmed: 0"
+                DeathCnt.text = "Deaths: 0"
+                RecoverCnt.text = "Recovered: 0"
+                ActiveCnt.text = "Active: 0"
             }
 
         }

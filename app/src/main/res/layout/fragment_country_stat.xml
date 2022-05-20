@@ -8,48 +8,83 @@
 
 
     <TextView
-        android:id="@+id/tvCountryName"
+        android:id="@+id/CountryName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="@string/country_name"
+        android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvConfirmedCnt"
+        android:id="@+id/ConfirmedCnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="@string/confirmed_0"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCountryName" />
+        app:layout_constraintTop_toBottomOf="@+id/CountryName" />
 
     <TextView
-        android:id="@+id/tvDeathCnt"
+        android:id="@+id/DeathCnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="@string/deaths_0"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvConfirmedCnt" />
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmedCnt" />
 
     <TextView
-        android:id="@+id/tvRecoverCnt"
+        android:id="@+id/RecoverCnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="@string/recovered_0"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDeathCnt" />
+        app:layout_constraintTop_toBottomOf="@+id/DeathCnt" />
 
     <TextView
-        android:id="@+id/tvActiveCnt"
+        android:id="@+id/ActiveCnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="@string/active_0"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRecoverCnt" />
+        app:layout_constraintTop_toBottomOf="@+id/RecoverCnt" />
 </androidx.constraintlayout.widget.ConstraintLayout>

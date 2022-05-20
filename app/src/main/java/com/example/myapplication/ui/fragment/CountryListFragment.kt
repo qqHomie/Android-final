@@ -15,7 +15,7 @@ import com.example.myapplication.viewmodel.CountryViewModel
 class CountryListFragment : Fragment(R.layout.fragment_country_list) {
     private lateinit var binding: FragmentCountryListBinding
     private lateinit var countryViewModel: CountryViewModel
-    private lateinit var rvCountriesAdapter: CountryAdapter
+    private lateinit var CountriesAdapter: CountryAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,9 +33,9 @@ class CountryListFragment : Fragment(R.layout.fragment_country_list) {
 
     fun initUI() {
         countryViewModel = CountryViewModel(Repository.getInstance())
-        rvCountriesAdapter = CountryAdapter(countryViewModel)
-        binding.rvCountries.apply {
-            adapter = rvCountriesAdapter
+        CountriesAdapter = CountryAdapter(countryViewModel)
+        binding.Countries.apply {
+            adapter = CountriesAdapter
             layoutManager = LinearLayoutManager(context)
             setHasFixedSize(true)
         }
@@ -44,8 +44,8 @@ class CountryListFragment : Fragment(R.layout.fragment_country_list) {
     fun observe() {
         countryViewModel.getCountries().observe(viewLifecycleOwner) {countries ->
             if (countries != null) {
-                rvCountriesAdapter.countries = countries
-                rvCountriesAdapter.notifyDataSetChanged()
+                CountriesAdapter.countries = countries
+                CountriesAdapter.notifyDataSetChanged()
             }
         }
     }
